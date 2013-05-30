@@ -1,4 +1,5 @@
 # coding: utf-8
+from __future__ import unicode_literals
 import sys
 import os.path as op
 
@@ -27,23 +28,27 @@ if role == 'vagrant':
     local('ssh-add %s' % op.expanduser('~/.vagrant.d/insecure_private_key'))
 
 def localsetup():
-    print u"Vagrant VM setup"
+    print "Vagrant VM setup"
     with lcd(op.join('..', 'vagrant')):
         with settings(warn_only=True):
             result = local('vagrant status', capture=True)
             if result.return_code == 0 and 'running' in str(result):
-                print u"Vagrant is already running, no need to start it."
+                print "Vagrant is already running, no need to start it."
             else:
                 local('vagrant up')
                 # Yeah, we need to provision it once more. Our puppet script isn't perfect. :(
                 local('vagrant provision')
     if not op.exists('/etc/hosts'):
-        print u"Your system has no /etc/hosts. You need to manually configure your system to make demo-django.local point to 127.0.0.1"
+        print "Your system has no /etc/hosts. You need to manually configure your system to make demo-django.local point to 127.0.0.1"
         return
+
+def hostssetup():
     ETCHOSTS_LINE = "127.0.0.1 demo-django.local"
     if ETCHOSTS_LINE not in open('/etc/hosts', 'rt').read():
-        print u"Adding demo-django.local to /etc/hosts."
+        print "Adding demo-django.local to /etc/hosts. Sudo required."
         local('echo "%s" | sudo tee -a /etc/hosts' % ETCHOSTS_LINE)
+    else:
+        print "Already done. Doing nothing."
 
 def initialsetup():
     # SETTINGS_PATH referenced below was placed automatically by Puppet
@@ -71,7 +76,7 @@ def restart():
     sudo('service apache2 restart')
 
 def debugserver():
-    print green(u"We're starting Django's built-in server. Access it through http://demo-django.local:8081")
+    print green("We're starting Django's built-in server. Access it through http://demo-django.local:8081")
     with cd(op.join(BASE_PATH, 'src')):
         run('../env/bin/python manage.py runserver 0.0.0.0:8080')
 
@@ -82,4 +87,6 @@ def deploy():
     updateenv()
     initialsetup()
     restart()
-    print u"Deployement complete! You can visit the website at http://demo-django.local:8080"
+    print green("Deployement complete! You can visit the website at http://demo-django.local:8080")
+    print green("Note: for the URL above to work, demo-django.local needs to point to 127.0.0.1.")
+    print green("You can either make that happen manually, or use the 'fab hostssetup' command.")
