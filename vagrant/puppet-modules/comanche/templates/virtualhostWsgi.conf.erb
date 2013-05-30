@@ -1,0 +1,6 @@
+<% if pythonpath %>
+WSGIDaemonProcess <%= vhostname %> python-path=<%= pythonpath %>
+WSGIProcessGroup <%= vhostname %>
+<% end %>
+<% if wsgipathfile == false %>  WSGIScriptAlias / <%= documentroot %>/<%= vhostname %>/wsgi.py
+<% else -%>  WSGIScriptAlias / <%= wsgipathfile %><% end %>

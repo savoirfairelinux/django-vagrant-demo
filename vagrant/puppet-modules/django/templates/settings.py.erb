@@ -1,0 +1,15 @@
+# !! THIS FILE IS BASED ON A TEMPLATE MANAGED BY PUPPET !!
+# coding: utf-8
+# Django prod settings for <%=sitename%>
+
+DEBUG = <%=djangodebug%>
+TEMPLATE_DEBUG = DEBUG
+
+BASE_URL = '<%=siteurl%>'
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': '<%=dbname%>',
+     }
+}

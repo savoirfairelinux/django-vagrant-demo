@@ -1,0 +1,4 @@
+*.pyc
+demo-django.db
+env
+src/demo/settings_env.py

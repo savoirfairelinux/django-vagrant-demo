@@ -1,0 +1,26 @@
+<VirtualHost <%= listenip %>:80>
+  ServerAdmin webmaster@localhost
+  ServerName <%= vhostname %>
+<% vhostalias.each do |valias| %>	ServerAlias <%=valias %>
+<% end -%>
+
+  DocumentRoot <%= apachewwwdir %>
+  <Directory />
+    Options FollowSymLinks
+    AllowOverride None
+  </Directory>
+  <Directory <%= apachewwwdir %> >
+    Options Indexes FollowSymLinks MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  ErrorLog <%= apachelogdir %>/<%= vhostname %>.error.log
+
+  # Possible values include: debug, info, notice, warn, error, crit,
+  # alert, emerg.
+  LogLevel warn
+
+  CustomLog <%= apachelogdir %>/<%= vhostname %>.access.log combined
+

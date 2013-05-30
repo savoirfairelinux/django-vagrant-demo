@@ -1,0 +1,23 @@
+Vagrant::Config.run do |config|
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  config.vm.host_name = "demo-django.local"
+
+  config.vm.forward_port 80, 8080
+  config.vm.forward_port 8080, 8081 # For debugserver mode
+  config.vm.forward_port 22, 2200
+
+  # Instead of pushing code to our VM through SSH, we simply create a shared folder. This allows us
+  # to develop more rapidly because we don't have to constantly push every little change to our
+  # local server before seeing the results
+  config.vm.share_folder "project", "/project_share", ".."
+  # See https://github.com/mitchellh/vagrant/issues/713#issuecomment-4416384
+  config.vm.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/project", "1"]
+
+  config.vm.provision :puppet do |puppet|
+    puppet.manifests_path = "manifests"
+    puppet.manifest_file  = "default.pp"
+    puppet.module_path  = "puppet-modules"
+  end
+end

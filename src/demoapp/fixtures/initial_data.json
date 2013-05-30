@@ -1,0 +1,630 @@
+[
+  {
+    "pk": "c3qh16b55lwwmi4466l3nj02pph55s66",
+    "model": "sessions.session",
+    "fields": {
+      "expire_date": "2013-03-14T20:34:25Z",
+      "session_data": "NjEzODEzMmUxOTRjNmQ3OGY1NjZjMDllZDYxZTVkMjgyYzAwMjA2ZDqAAn1xAShVEl9hdXRoX3VzZXJfYmFja2VuZHECVSlkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZHEDVQ1fYXV0aF91c2VyX2lkcQSKAQF1Lg=="
+    }
+  },
+  {
+    "pk": 1,
+    "model": "sites.site",
+    "fields": {
+      "domain": "example.com",
+      "name": "example.com"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 42,
+      "name": "Python"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 30,
+      "name": "South"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 41,
+      "name": "Le Bateau de nuit"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 40,
+      "name": "The White Stripes"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 39,
+      "name": "Sublime Text"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 38,
+      "name": "Steam being on Ubuntu"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 37,
+      "name": "Django"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 36,
+      "name": "Pulp Fiction"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 35,
+      "name": "Alexis de Tocqueville"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 34,
+      "name": "La Corte Real des Naufrageurs"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 33,
+      "name": "Half-Life"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 32,
+      "name": "The Daily Show with Jon Stewart"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": -42,
+      "name": "Donald Trump"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": -41,
+      "name": "Developer setup on a Windows machine"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": -40,
+      "name": "Indiana Jones 4"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": -39,
+      "name": "Star Academy"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": 31,
+      "name": "Le Devoir"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "demoapp.thing",
+    "fields": {
+      "coolness": -38,
+      "name": "Le Journal de Mourial"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_permission",
+      "name": "Can add permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 2,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_permission",
+      "name": "Can change permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 3,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_permission",
+      "name": "Can delete permission",
+      "content_type": 1
+    }
+  },
+  {
+    "pk": 4,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_group",
+      "name": "Can add group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 5,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_group",
+      "name": "Can change group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 6,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_group",
+      "name": "Can delete group",
+      "content_type": 2
+    }
+  },
+  {
+    "pk": 7,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_user",
+      "name": "Can add user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 8,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_user",
+      "name": "Can change user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 9,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_user",
+      "name": "Can delete user",
+      "content_type": 3
+    }
+  },
+  {
+    "pk": 10,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_contenttype",
+      "name": "Can add content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 11,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_contenttype",
+      "name": "Can change content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 12,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_contenttype",
+      "name": "Can delete content type",
+      "content_type": 4
+    }
+  },
+  {
+    "pk": 13,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_session",
+      "name": "Can add session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 14,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_session",
+      "name": "Can change session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 15,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_session",
+      "name": "Can delete session",
+      "content_type": 5
+    }
+  },
+  {
+    "pk": 16,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_site",
+      "name": "Can add site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 17,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_site",
+      "name": "Can change site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 18,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_site",
+      "name": "Can delete site",
+      "content_type": 6
+    }
+  },
+  {
+    "pk": 19,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_thing",
+      "name": "Can add thing",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 20,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_thing",
+      "name": "Can change thing",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 21,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_thing",
+      "name": "Can delete thing",
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 22,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "add_logentry",
+      "name": "Can add log entry",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 23,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "change_logentry",
+      "name": "Can change log entry",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 24,
+    "model": "auth.permission",
+    "fields": {
+      "codename": "delete_logentry",
+      "name": "Can delete log entry",
+      "content_type": 8
+    }
+  },
+  {
+    "pk": 1,
+    "model": "auth.user",
+    "fields": {
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "is_active": true,
+      "is_superuser": true,
+      "is_staff": true,
+      "last_login": "2013-02-28T20:34:25Z",
+      "groups": [],
+      "user_permissions": [],
+      "password": "pbkdf2_sha256$10000$p0KvPIXJI9QS$XI88tgVP0khBQjTV2T4zHQnhDDQuJ8nwHvRkERDN0EI=",
+      "email": "foo@bar.com",
+      "date_joined": "2013-02-28T20:33:14Z"
+    }
+  },
+  {
+    "pk": 1,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:34:47Z",
+      "object_repr": "Thing object",
+      "object_id": "1",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 2,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:35:38Z",
+      "object_repr": "<Thing: South / 30>",
+      "object_id": "2",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 3,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:36:01Z",
+      "object_repr": "<Thing: Le Bateau de nuit / 41>",
+      "object_id": "3",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 4,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:36:26Z",
+      "object_repr": "<Thing: The White Stripes / 40>",
+      "object_id": "4",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 5,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:37:30Z",
+      "object_repr": "<Thing: Sublime Text / 39>",
+      "object_id": "5",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 6,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:37:52Z",
+      "object_repr": "<Thing: Steam being on Ubuntu / 38>",
+      "object_id": "6",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 7,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:38:21Z",
+      "object_repr": "<Thing: Django / 37>",
+      "object_id": "7",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 8,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:38:48Z",
+      "object_repr": "<Thing: Pulp Fiction / 36>",
+      "object_id": "8",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 9,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:39:32Z",
+      "object_repr": "<Thing: Alexis de Tocqueville / 35>",
+      "object_id": "9",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 10,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:40:50Z",
+      "object_repr": "<Thing: La Corte Real des Naufrageurs / 34>",
+      "object_id": "10",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 11,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:41:57Z",
+      "object_repr": "<Thing: Half-Life / 33>",
+      "object_id": "11",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 12,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:42:26Z",
+      "object_repr": "<Thing: The Daily Show with Jon Stewart / 32>",
+      "object_id": "12",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 13,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:43:36Z",
+      "object_repr": "<Thing: Jean Charest / -42>",
+      "object_id": "13",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 14,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:44:54Z",
+      "object_repr": "<Thing: Developer setup on a Windows machine / -41>",
+      "object_id": "14",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 15,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:46:14Z",
+      "object_repr": "<Thing: Indiana Jones 4 / -40>",
+      "object_id": "15",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 16,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:46:56Z",
+      "object_repr": "<Thing: Star Academy / -39>",
+      "object_id": "16",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 17,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:47:14Z",
+      "object_repr": "<Thing: Le Devoir / 31>",
+      "object_id": "17",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  },
+  {
+    "pk": 18,
+    "model": "admin.logentry",
+    "fields": {
+      "action_flag": 1,
+      "action_time": "2013-02-28T20:47:37Z",
+      "object_repr": "<Thing: Le Journal de Mourial / -38>",
+      "object_id": "18",
+      "change_message": "",
+      "user": 1,
+      "content_type": 7
+    }
+  }
+]
