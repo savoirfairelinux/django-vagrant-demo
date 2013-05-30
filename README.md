@@ -25,10 +25,9 @@ Then, you can open http://demo-django.local:8080 and visit your newly locally de
 
 At one point, your `sudo` password will be asked, that's Vagrant that needs to modify your
 `/etc/hosts` file. The project itself will also need to modify that file so that `demo-django.local`
-points to `127.0.0.1` this is why it will ask you to run the `fab hostssetup` command, which also
-needs admin privileges.
+points to `127.0.0.1`, a task which also requires admin privileges.
 
-There's even a `fab debugserver` you can use, after your `fab deploy` to start Django's built-in
+There's a `fab debugserver` you can use, after your `fab deploy` to start Django's built-in
 server from within the Vagrant VM (it makes debugging easier).
 
 When you're finished toying with the project, go into the `vagrant` folder and run `vagrant destroy`
