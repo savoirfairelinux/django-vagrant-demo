@@ -87,6 +87,6 @@ def deploy():
     updateenv()
     initialsetup()
     restart()
-    print green("Deployement complete! You can visit the website at http://demo-django.local:8080")
+    print green("Deployment complete! You can visit the website at http://demo-django.local:8080")
     print green("Note: for the URL above to work, demo-django.local needs to point to 127.0.0.1.")
     print green("You can either make that happen manually, or use the 'fab hostssetup' command.")
