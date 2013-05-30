@@ -1,8 +1,8 @@
 Django-Vagrant demo
 ===
 
-This is an example Django projet integrated with Vagrant for an easy local deployment. This
-is a simple Django project to demonstrates how easy it is to run, from nothing, a new projet when it
+This is an example Django project integrated with Vagrant for an easy local deployment. This
+is a simple Django project to demonstrates how easy it is to run, from nothing, a new project when it
 is properly integrated with Vagrant.
 
 Running the project
