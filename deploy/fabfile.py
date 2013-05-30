@@ -43,6 +43,7 @@ def localsetup():
         return
 
 def hostssetup():
+    print green("Setting up, if needed, demo-django.local pointing to 127.0.0.1")
     ETCHOSTS_LINE = "127.0.0.1 demo-django.local"
     if ETCHOSTS_LINE not in open('/etc/hosts', 'rt').read():
         print "Adding demo-django.local to /etc/hosts. Sudo required."
@@ -87,6 +88,5 @@ def deploy():
     updateenv()
     initialsetup()
     restart()
+    hostssetup()
     print green("Deployment complete! You can visit the website at http://demo-django.local:8080")
-    print green("Note: for the URL above to work, demo-django.local needs to point to 127.0.0.1.")
-    print green("You can either make that happen manually, or use the 'fab hostssetup' command.")
