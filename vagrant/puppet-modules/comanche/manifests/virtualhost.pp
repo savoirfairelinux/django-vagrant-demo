@@ -7,10 +7,10 @@ define comanche::virtualhost(
   $vhostalias = [],
   $listenip   = '*',
   $documentroot="$comanche::variables::wwwrootdir/$vhostname",
-  ssl = false,
-  sslkey=false,  # used if ssl ==true
-  sslcrt=false,  # used if ssl ==true
-  sslchain=false # optional used if ssl ==true
+  $ssl = false,
+  $sslkey=false,  # used if ssl ==true
+  $sslcrt=false,  # used if ssl ==true
+  $sslchain=false # optional used if ssl ==true
 ) {
   include concat::setup
   if (!defined(File[$documentroot])) {

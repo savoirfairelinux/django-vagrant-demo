@@ -21,10 +21,10 @@ Once you have all of this, all you need to do to run, from nothing, the project 
     $ cd django-vagrant-demo/deploy
     $ fab deploy
 
-Then, you can open http://django-demo.local:8080 and visit your newly locally deployed django site!
+Then, you can open http://demo-django.local:8080 and visit your newly locally deployed django site!
 
 The deploy process will need one command in `sudo` mode, which is to modify `/etc/hosts` to make
-`django-demo.local` point to `127.0.0.1`. If you're uncomfortable with the idea of entering your
+`demo-django.local` point to `127.0.0.1`. If you're uncomfortable with the idea of entering your
 sudo password, you can perform this task manually and skip that part.
 
 There's even a `fab debugserver` you can use, after your `fab deploy` to start Django's built-in
