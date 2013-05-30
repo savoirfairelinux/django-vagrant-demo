@@ -3,7 +3,7 @@ Django-Vagrant demo
 
 This is an example Django projet integrated with Vagrant for an easy local deployment. This
 is a simple Django project to demonstrates how easy it is to run, from nothing, a new projet when it
-properly integrated with Vagrant.
+is properly integrated with Vagrant.
 
 Running the project
 ---
@@ -15,7 +15,7 @@ To run the project, you need only 4 things:
 3. Vagrant ( http://www.vagrantup.com/ )
 4. Fabric ( http://docs.fabfile.org/ )
 
-Once you have all of this, all you need to do to run, from nothing, the project is:
+Once you have all of this, all you need to do to run the project from nothing is:
 
     $ git clone https://github.com/savoirfairelinux/django-vagrant-demo
     $ cd django-vagrant-demo/deploy
@@ -30,7 +30,7 @@ sudo password, you can perform this task manually and skip that part.
 There's even a `fab debugserver` you can use, after your `fab deploy` to start Django's built-in
 server from within the Vagrant VM (it makes debugging easier).
 
-When you're finished tying with the project, go into the `vagrant` folder and run `vagrant destroy`
+When you're finished toying with the project, go into the `vagrant` folder and run `vagrant destroy`
 to remove the VM that was automatically created.
 
 Separation of concerns
@@ -56,6 +56,7 @@ About that Puppet code
 ---
 
 The Puppet code used here is a small subset of our own internal Puppet library. This library is
-being written and used by sysadmins here and has a lot of ... battle scars? This is only a showcase
-for Vagrant's potential and if you want do your own integration, you might want to use a more
-elegant library, such as the ones developed by PuppetLabs at https://github.com/puppetlabs
+being written and used by sysadmins here and has a lot of ... battle scars. This is only a showcase
+for Vagrant's potential and if you want to bring that awesomeness into your own projects, you might
+want to use a more elegant library, such as the ones developed by PuppetLabs at
+https://github.com/puppetlabs
