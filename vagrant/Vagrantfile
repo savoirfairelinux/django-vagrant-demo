@@ -4,8 +4,11 @@ Vagrant::Config.run do |config|
 
   # When the vagrant-vbguest package is installed, it automatically tries to update the guest
   # additions in the precise64 box, and this update fails. We want to avoid this, thus the flag
-  # below.
-  config.vbguest.auto_update = false
+  # below. I've looked around and the condition below is the best one I've found to test if vbguest
+  # is installed. If we set that config when vbguest is not installed, we get warnings/errors
+  if defined? VagrantVbguest::Config
+    config.vbguest.auto_update = false
+  end
 
   config.vm.host_name = "demo-django.local"
 
