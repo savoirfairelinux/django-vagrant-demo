@@ -1,6 +1,6 @@
 Vagrant::Config.run do |config|
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "precise32"
+  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   # When the vagrant-vbguest package is installed, it automatically tries to update the guest
   # additions in the precise64 box, and this update fails. We want to avoid this, thus the flag

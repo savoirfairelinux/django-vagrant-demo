@@ -30,6 +30,8 @@ def localsetup():
                 local('vagrant up')
                 # Yeah, we need to provision it once more. Our puppet script isn't perfect. :(
                 local('vagrant provision')
+                # Just once more to be sure...
+                local('vagrant provision')
     if not op.exists(op.expanduser('~/.ssh/config')):
         print "Your file ~/.ssh/config doesn't exist but has to for the next command to work. Creating one now."
         with open(op.expanduser('~/.ssh/config'), 'wt') as fp:
@@ -70,8 +72,8 @@ def restart():
     SCRIPT_PATH = op.join(op.dirname(BASE_PATH), 'restart.sh')
     run('source %s' % SCRIPT_PATH)
     # Under vagrant, after the first provisionning, Apache is initially confused, so this is why
-    # we restart the whole server, but we normally don't have to do that.
-    sudo('service apache2 restart')
+    # we reload the config, but we normally don't have to do that.
+    sudo('service apache2 reload')
 
 def debugserver():
     print green("We're starting Django's built-in server. Access it through http://demo-django.local:8081")
@@ -87,3 +89,4 @@ def deploy():
     restart()
     hostssetup()
     print green("Deployment complete! You can visit the website at http://demo-django.local:8080")
+    print green("(Sometimes, right after a fresh deploy, apache is glitchy. If the URL doesn't respond, try running 'fab restart')")
