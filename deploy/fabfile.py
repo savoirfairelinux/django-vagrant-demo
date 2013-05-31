@@ -19,14 +19,6 @@ BASE_PATH = {
     'vagrant': '/opt/demo_django/www',
 }[role]
 
-# User "vagrant" of a vagrant VM use a dummy SSH key that has to be added to our config
-if role == 'vagrant':
-    if not op.exists(op.expanduser('~/.ssh/config')):
-        print "Your file ~/.ssh/config doesn't exist but has to for the next command to work. Creating one now."
-        with open(op.expanduser('~/.ssh/config'), 'wt') as fp:
-            fp.write("IdentityFile ~/.ssh/id_rsa")
-    local('ssh-add %s' % op.expanduser('~/.vagrant.d/insecure_private_key'))
-
 def localsetup():
     print "Vagrant VM setup"
     with lcd(op.join('..', 'vagrant')):
@@ -38,12 +30,17 @@ def localsetup():
                 local('vagrant up')
                 # Yeah, we need to provision it once more. Our puppet script isn't perfect. :(
                 local('vagrant provision')
-    if not op.exists('/etc/hosts'):
-        print "Your system has no /etc/hosts. You need to manually configure your system to make demo-django.local point to 127.0.0.1"
-        return
+    if not op.exists(op.expanduser('~/.ssh/config')):
+        print "Your file ~/.ssh/config doesn't exist but has to for the next command to work. Creating one now."
+        with open(op.expanduser('~/.ssh/config'), 'wt') as fp:
+            fp.write("IdentityFile ~/.ssh/id_rsa")
+    local('ssh-add %s' % op.expanduser('~/.vagrant.d/insecure_private_key'))
 
 def hostssetup():
     print green("Setting up, if needed, demo-django.local pointing to 127.0.0.1")
+    if not op.exists('/etc/hosts'):
+        print red("Your system has no /etc/hosts. You need to manually configure your system to make demo-django.local point to 127.0.0.1")
+        return
     ETCHOSTS_LINE = "127.0.0.1 demo-django.local"
     if ETCHOSTS_LINE not in open('/etc/hosts', 'rt').read():
         print "Adding demo-django.local to /etc/hosts. Sudo required."
