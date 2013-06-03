@@ -5,6 +5,16 @@ This is an example Django project integrated with Vagrant for an easy local depl
 is a simple project to demonstrate how easy it is to run, from nothing, a new project when it
 is properly integrated with Vagrant.
 
+VT-x support required
+---
+
+The base box used by the project, `precise64`, requires VT-x support in the CPU. You need it to run
+the project out of the box. I've tried using `precise32`, but Apache, right after a fresh deploy, is
+flaky on it, for some reason I'm not aware of. If your machine doesn't support VT-x, you can always
+tell Vagrant to use `precise32` by modifying `vagrant/Vagrantfile` at lines 2 and 3, but be aware
+that you'll probably have to restart the VM (`vagrant halt && vagrant up`) before Apache can serve
+the site correctly.
+
 Running the project
 ---
 
@@ -38,7 +48,7 @@ What's in a fab deploy?
 
 In one little `fab deploy` command, here's what is done:
 
-1. Importing the `precise32` (Ubuntu 12.04 32-bit) base box in Vagrant.
+1. Importing the `precise64` (Ubuntu 12.04 64-bit) base box in Vagrant.
 2. Installing Apache, Python, pip, virtualenv through `apt-get` in that new VM.
 3. Preparing the folder structure to host the project (which is made available to the VM through a VirtualBox folder share)
 4. Setting up Apache WSGI-based virtualhost that point to folder structure we've prepared.
