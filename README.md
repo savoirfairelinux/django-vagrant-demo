@@ -46,7 +46,7 @@ In one little `fab deploy` command, here's what is done:
 6. Installing Django on it.
 7. Integrate Puppet-generated system-specific config (DB access, base URL, etc.) to the generic Django project configuration.
 8. Initializing the DB.
-9. Adding fixtures for initial data.
+9. Adding initial data from Django fixtures.
 10. Performing Django's `collectstatic` action.
 11. Reloading Apache
 12. Making `demo-django.local` point to `127.0.0.1` on your host machine.
