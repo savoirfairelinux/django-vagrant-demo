@@ -72,8 +72,8 @@ def restart():
     SCRIPT_PATH = op.join(op.dirname(BASE_PATH), 'restart.sh')
     run('source %s' % SCRIPT_PATH)
     # Under vagrant, after the first provisionning, Apache is initially confused, so this is why
-    # we reload the config, but we normally don't have to do that.
-    sudo('service apache2 reload')
+    # we restart it, but we normally don't have to do that.
+    sudo('service apache2 restart')
 
 def debugserver():
     print green("We're starting Django's built-in server. Access it through http://demo-django.local:8081")
